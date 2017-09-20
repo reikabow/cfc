@@ -20,10 +20,6 @@ router.use((err, req, res, next) => {
   res.status(500).send(err);
 });
 
-router.get('/health', (req, res) => {
-  res.json({ status: 'good' });
-});
-
 router.get('/simplified', asyncMiddleware(async (req, res, next) => {
   res.json(await api.simplified(req.query.q));
 }));
