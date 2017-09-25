@@ -1,0 +1,11 @@
+{
+  "name": "chinese-flashcards",
+  "version": "0.0.1",
+  "description": "Chinese dictionary service with integrated flash cards",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Victor <victorsui11@gmail.com>",
+  "license": "ISC"
+}
