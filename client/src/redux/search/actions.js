@@ -8,39 +8,41 @@ export function editSearch(needle) {
   };
 }
 
-export const REQUEST_SEARCH = 'REQUEST_SEARCH';
-export function requestSearch(needle) {
+export const FETCH_SEARCH_REQUEST = 'FETCH_SEARCH_REQUEST';
+export function fetchSearchRequest(needle) {
   return {
-    type: REQUEST_SEARCH,
+    type: FETCH_SEARCH_REQUEST,
     needle,
   };
 }
 
-export const RECEIVE_SEARCH = 'RECEIVE_SEARCH';
-export function receiveSearch(results) {
+export const FETCH_SEARCH_SUCCESS = 'FETCH_SEARCH_SUCCESS';
+export function fetchSearchSuccess(rows) {
   return {
-    type: RECEIVE_SEARCH,
-    results,
+    type: FETCH_SEARCH_SUCCESS,
+    rows,
   };
 }
 
-export const SEARCH_FAILED = 'SEARCH_FAILED';
-export function searchFailed(error) {
+export const FETCH_SEARCH_FAILURE = 'FETCH_SEARCH_FAILURE';
+export function fetchSearchFailure() {
   return {
-    type: SEARCH_FAILED,
-    error,
+    type: FETCH_SEARCH_FAILURE,
   };
 }
 
 export const FETCH_SEARCH = 'FETCH_SEARCH';
 export function fetchSearch({ needle, searchType }) {
   return function searchThunk(dispatch) {
-    dispatch(requestSearch(needle));
+    dispatch(fetchSearchRequest(needle));
     return fetch(`http://localhost:3001/api/search/${searchType}?q=${needle}`)
       .then(
         response => response.json(),
-        error => console.log(error),
+        error => dispatch(fetchSearchFailure()),
       )
-      .then(json => dispatch(receiveSearch(json)));
-  }
+      .then(
+        json => dispatch(fetchSearchSuccess(json)),
+        error => dispatch(fetchSearchFailure()),
+      );
+  };
 }
