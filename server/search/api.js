@@ -13,7 +13,7 @@ const pool = new Pool();
  * @return {???} - ???
  */
 async function simplified(needle) {
-  const rows = await pool.query(`
+  const { rows } = await pool.query(`
     SELECT id, simplified, traditional, pinyin, definition
     FROM dictionary
     WHERE simplified = $1`, [needle]);
@@ -21,7 +21,7 @@ async function simplified(needle) {
 }
 
 async function traditional(needle) {
-  const rows = await pool.query(`
+  const { rows } = await pool.query(`
     SELECT id, simplified, traditional, pinyinm definition
     FROM dictionary
     WHERE traditional = $1`, [needle]);
@@ -34,7 +34,7 @@ async function traditional(needle) {
  * @param {string} needle - The text to search for
  */
 async function pinyin(needle) {
-  const rows = await pool.query(`
+  const { rows } = await pool.query(`
     SELECT id, simplified, traditional, pinyin, definition
     FROM dictionary
     WHERE pinyin = $1`, [needle]);
@@ -42,7 +42,7 @@ async function pinyin(needle) {
 }
 
 async function definition(needle) {
-  const rows = await pool.query(`
+  const { rows } = await pool.query(`
   SELECT id, simplified, traditional, pinyin, definition
   FROM dictionary
   WHERE definition = $1`, [needle]);
