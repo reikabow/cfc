@@ -1,7 +1,11 @@
+import fetch from 'isomorphic-fetch';
+
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import nock from 'nock';
 import searchReducer from './reducers';
+
+global.fetch = fetch;
 
 import * as actions from './actions';
 import * as reducers from './reducers';

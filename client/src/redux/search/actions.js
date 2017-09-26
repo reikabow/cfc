@@ -1,5 +1,3 @@
-import fetch from 'isomorphic-fetch';
-
 export const EDIT_SEARCH = 'EDIT_SEARCH';
 export function editSearch(needle) {
   return {
