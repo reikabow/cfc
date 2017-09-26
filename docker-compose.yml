@@ -1,0 +1,33 @@
+version: "3"
+services:
+  client:
+    volumes:
+      - ./client:/code
+      - /code/node_modules
+    build: ./client
+    ports:
+    - "3000:3000"
+    links:
+    - server
+  server:
+    volumes:
+    - ./server:/code
+    - /code/node_modules
+    build: ./server
+    ports:
+    - "3001:3001"
+    environment:
+      PGUSER: cfc
+      PGPASSWORD: apple1
+      PGHOST: db
+      PGPORT: 5432
+      PORT: 3001
+  db:
+    image: postgres:alpine
+    volumes:
+    - ./database:/var/lib/postgresql
+    ports:
+    - "6543:5432"
+    environment:
+      POSTGRES_PASSWORD: "apple1"
+      POSTGRES_USER: "cfc"

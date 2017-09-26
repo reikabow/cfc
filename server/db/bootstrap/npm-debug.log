@@ -1,0 +1,119 @@
+info it worked if it ends with ok
+verbose cli [ 'node', '/usr/bin/npm', 'install' ]
+info using npm@1.1.4
+info using node@v0.6.12
+verbose config file /root/.npmrc
+verbose config file /usr/etc/npmrc
+verbose config file /usr/share/npm/npmrc
+verbose caching /vagrant/server/db/bootstrap/package.json
+verbose loadDefaults chinese-practice-db@1.0.0
+verbose readDependencies: using package.json deps
+verbose where, deps [ '/vagrant/server/db/bootstrap',
+verbose where, deps   [ 'bluebird',
+verbose where, deps     'pg',
+verbose where, deps     'eslint',
+verbose where, deps     'eslint-config-airbnb-base',
+verbose where, deps     'eslint-plugin-import' ] ]
+verbose from cache /vagrant/server/db/bootstrap/package.json
+info preinstall chinese-practice-db@1.0.0
+verbose from cache /vagrant/server/db/bootstrap/package.json
+verbose readDependencies: using package.json deps
+verbose cache add [ 'pg@^7.3.0', null ]
+silly cache add: name, spec, args [ undefined, 'pg@^7.3.0', [ 'pg@^7.3.0', null ] ]
+verbose parsed url { pathname: 'pg@^7.3.0', path: 'pg@^7.3.0', href: 'pg@^7.3.0' }
+silly cache add: name, spec, args [ 'pg', '^7.3.0', [ 'pg', '^7.3.0' ] ]
+verbose parsed url { pathname: '^7.3.0', path: '^7.3.0', href: '^7.3.0' }
+verbose addNamed [ 'pg', '^7.3.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'pg', '^7.3.0' ]
+verbose raw, before any munging pg
+verbose url resolving [ 'https://registry.npmjs.org/', './pg' ]
+verbose url resolved https://registry.npmjs.org/pg
+http GET https://registry.npmjs.org/pg
+verbose cache add [ 'eslint@^4.7.0', null ]
+silly cache add: name, spec, args [ undefined, 'eslint@^4.7.0', [ 'eslint@^4.7.0', null ] ]
+verbose parsed url { pathname: 'eslint@^4.7.0',
+verbose parsed url   path: 'eslint@^4.7.0',
+verbose parsed url   href: 'eslint@^4.7.0' }
+silly cache add: name, spec, args [ 'eslint', '^4.7.0', [ 'eslint', '^4.7.0' ] ]
+verbose parsed url { pathname: '^4.7.0', path: '^4.7.0', href: '^4.7.0' }
+verbose addNamed [ 'eslint', '^4.7.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'eslint', '^4.7.0' ]
+verbose cache add [ 'eslint-config-airbnb-base@^12.0.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'eslint-config-airbnb-base@^12.0.0',
+silly cache add: name, spec, args   [ 'eslint-config-airbnb-base@^12.0.0', null ] ]
+verbose parsed url { pathname: 'eslint-config-airbnb-base@^12.0.0',
+verbose parsed url   path: 'eslint-config-airbnb-base@^12.0.0',
+verbose parsed url   href: 'eslint-config-airbnb-base@^12.0.0' }
+silly cache add: name, spec, args [ 'eslint-config-airbnb-base',
+silly cache add: name, spec, args   '^12.0.0',
+silly cache add: name, spec, args   [ 'eslint-config-airbnb-base', '^12.0.0' ] ]
+verbose parsed url { pathname: '^12.0.0', path: '^12.0.0', href: '^12.0.0' }
+verbose addNamed [ 'eslint-config-airbnb-base', '^12.0.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'eslint-config-airbnb-base', '^12.0.0' ]
+verbose cache add [ 'eslint-plugin-import@^2.7.0', null ]
+silly cache add: name, spec, args [ undefined,
+silly cache add: name, spec, args   'eslint-plugin-import@^2.7.0',
+silly cache add: name, spec, args   [ 'eslint-plugin-import@^2.7.0', null ] ]
+verbose parsed url { pathname: 'eslint-plugin-import@^2.7.0',
+verbose parsed url   path: 'eslint-plugin-import@^2.7.0',
+verbose parsed url   href: 'eslint-plugin-import@^2.7.0' }
+silly cache add: name, spec, args [ 'eslint-plugin-import',
+silly cache add: name, spec, args   '^2.7.0',
+silly cache add: name, spec, args   [ 'eslint-plugin-import', '^2.7.0' ] ]
+verbose parsed url { pathname: '^2.7.0', path: '^2.7.0', href: '^2.7.0' }
+verbose addNamed [ 'eslint-plugin-import', '^2.7.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'eslint-plugin-import', '^2.7.0' ]
+verbose cache add [ 'bluebird@^3.5.0', null ]
+silly cache add: name, spec, args [ undefined, 'bluebird@^3.5.0', [ 'bluebird@^3.5.0', null ] ]
+verbose parsed url { pathname: 'bluebird@^3.5.0',
+verbose parsed url   path: 'bluebird@^3.5.0',
+verbose parsed url   href: 'bluebird@^3.5.0' }
+silly cache add: name, spec, args [ 'bluebird', '^3.5.0', [ 'bluebird', '^3.5.0' ] ]
+verbose parsed url { pathname: '^3.5.0', path: '^3.5.0', href: '^3.5.0' }
+verbose addNamed [ 'bluebird', '^3.5.0' ]
+verbose addNamed [ null, null ]
+info addNameTag [ 'bluebird', '^3.5.0' ]
+verbose raw, before any munging eslint
+verbose url resolving [ 'https://registry.npmjs.org/', './eslint' ]
+verbose url resolved https://registry.npmjs.org/eslint
+http GET https://registry.npmjs.org/eslint
+verbose raw, before any munging eslint-config-airbnb-base
+verbose url resolving [ 'https://registry.npmjs.org/', './eslint-config-airbnb-base' ]
+verbose url resolved https://registry.npmjs.org/eslint-config-airbnb-base
+http GET https://registry.npmjs.org/eslint-config-airbnb-base
+verbose raw, before any munging eslint-plugin-import
+verbose url resolving [ 'https://registry.npmjs.org/', './eslint-plugin-import' ]
+verbose url resolved https://registry.npmjs.org/eslint-plugin-import
+http GET https://registry.npmjs.org/eslint-plugin-import
+verbose raw, before any munging bluebird
+verbose url resolving [ 'https://registry.npmjs.org/', './bluebird' ]
+verbose url resolved https://registry.npmjs.org/bluebird
+http GET https://registry.npmjs.org/bluebird
+ERR! Error: failed to fetch from registry: pg
+ERR!     at /usr/share/npm/lib/utils/npm-registry-client/get.js:139:12
+ERR!     at cb (/usr/share/npm/lib/utils/npm-registry-client/request.js:31:9)
+ERR!     at Request._callback (/usr/share/npm/lib/utils/npm-registry-client/request.js:136:18)
+ERR!     at Request.callback (/usr/lib/nodejs/request/main.js:119:22)
+ERR!     at Request.<anonymous> (/usr/lib/nodejs/request/main.js:212:58)
+ERR!     at Request.emit (events.js:88:20)
+ERR!     at ClientRequest.<anonymous> (/usr/lib/nodejs/request/main.js:412:12)
+ERR!     at ClientRequest.emit (events.js:67:17)
+ERR!     at HTTPParser.onIncoming (http.js:1261:11)
+ERR!     at HTTPParser.onHeadersComplete (http.js:102:31)
+ERR! You may report this log at:
+ERR!     <http://bugs.debian.org/npm>
+ERR! or use
+ERR!     reportbug --attach /vagrant/server/db/bootstrap/npm-debug.log npm
+ERR! 
+ERR! System Linux 3.2.0-23-generic
+ERR! command "node" "/usr/bin/npm" "install"
+ERR! cwd /vagrant/server/db/bootstrap
+ERR! node -v v0.6.12
+ERR! npm -v 1.1.4
+ERR! message failed to fetch from registry: pg
+verbose exit [ 1, true ]

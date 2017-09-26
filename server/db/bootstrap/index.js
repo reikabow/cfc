@@ -6,8 +6,6 @@ const readFile = Promise.promisify(require('fs').readFile);
 const DICT_PATH = './cedict_1_0_ts_utf-8_mdbg.txt';
 const N_HEADER = 30;
 
-process.env.PGDATABASE = 'chinesepractice';
-
 const pool = new Pool();
 
 readFile(DICT_PATH, 'utf8')

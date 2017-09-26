@@ -3,7 +3,6 @@ const { Pool } = require('pg');
 // PGHOST
 // PGPORT
 // PGDATABASE
-process.env.PGDATABASE = 'chinesepractice';
 // PGUSER
 // PGPASSWORD
 const pool = new Pool();

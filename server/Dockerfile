@@ -1,12 +1,16 @@
-FROM node:latest
+FROM node:alpine
 
-COPY . /code
 WORKDIR /code
 
-RUN npm install
-RUN npm install -g nodemon
+RUN npm install -g --silent nodemon
+COPY package.json package-lock.json /code/
+RUN npm install --silent
 
-ENV PORT 8000
-EXPOSE 8000
+COPY db/bootstrap /bootstrap
+WORKDIR /bootstrap
+RUN npm install --silent && node index
+WORKDIR /code
+
+EXPOSE 3001
 
 CMD ["nodemon", "index"]
