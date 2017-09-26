@@ -1,19 +1,17 @@
 version: "3"
 services:
   client:
-    volumes:
-      - ./client:/code
-      - /code/node_modules
     build: ./client
+    volumes:
+    - ./client:/code
+    - /code/node_modules
     ports:
     - "3000:3000"
-    links:
-    - server
   server:
+    build: ./server
     volumes:
     - ./server:/code
     - /code/node_modules
-    build: ./server
     ports:
     - "3001:3001"
     environment:
@@ -27,7 +25,7 @@ services:
     volumes:
     - ./database:/var/lib/postgresql
     ports:
-    - "6543:5432"
+    - "5432:5432"
     environment:
-      POSTGRES_PASSWORD: "apple1"
-      POSTGRES_USER: "cfc"
+      POSTGRES_PASSWORD: apple1
+      POSTGRES_USER: cfc
