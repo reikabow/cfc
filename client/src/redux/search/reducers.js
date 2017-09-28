@@ -1,6 +1,3 @@
-import { combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-
 import {
   EDIT_SEARCH,
   FETCH_SEARCH_FAILURE,
@@ -35,8 +32,3 @@ export function searchResults(
       return state;
   }
 }
-
-export default combineReducers({
-  needle,
-  searchResults,
-});

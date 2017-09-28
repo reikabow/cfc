@@ -1,14 +1,5 @@
-import thunkMiddleware from 'redux-thunk';
-import { createLogger } from 'redux-logger';
-import { createStore, applyMiddleware } from 'redux';
-import searchReducer from './search/reducers';
+import { combineReducers } from 'redux';
 
-const loggerMiddleware = createLogger();
+import search from './search/';
 
-export default createStore(
-  searchReducer,
-  applyMiddleware(
-    thunkMiddleware,
-    loggerMiddleware,
-  ),
-);
+export default search;
