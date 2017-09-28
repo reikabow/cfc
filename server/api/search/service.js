@@ -1,6 +1,4 @@
-const { Pool } = require('pg');
-
-const pool = new Pool();
+const pool = require('../database');
 
 /**
  * Searches dictionary for matching simplified text
