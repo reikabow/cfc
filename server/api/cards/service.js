@@ -1,7 +1,12 @@
 const pool = require('../database');
 
+<<<<<<< HEAD
 async function createCard(card) {
   const unpacked = [card.groupId, card.simplified, card.traditional,
+=======
+async function create(card) {
+  const unpacked = [card.cardgroupId, card.simplified, card.traditional,
+>>>>>>> 4fde634952655c0a70c9175c1b6cb6317f0b1688
     card.pinyin, card.definition];
   await pool.query(`
     INSERT INTO card (cardgroup_id, simplified, traditional, pinyin, definition)
@@ -16,12 +21,15 @@ async function createGroup(name) {
   return response.rows;
 }
 
+<<<<<<< HEAD
 async function getCards() {
   const { rows } = await pool.query(`
     SELECT * FROM card`);
   return rows;
 }
 
+=======
+>>>>>>> 4fde634952655c0a70c9175c1b6cb6317f0b1688
 async function getCardsFromGroup(groupId) {
   const rows = await pool.query(`
     SELECT id, simplified, traditional, pinyin, definition
@@ -31,8 +39,13 @@ async function getCardsFromGroup(groupId) {
 }
 
 module.exports = {
+<<<<<<< HEAD
   createCard,
   createGroup,
   getCards,
+=======
+  create,
+  createGroup,
+>>>>>>> 4fde634952655c0a70c9175c1b6cb6317f0b1688
   getCardsFromGroup,
 };
