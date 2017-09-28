@@ -36,11 +36,11 @@ export function fetchSearch({ needle, searchType }) {
     return fetch(`http://localhost:3001/api/search/${searchType}?q=${needle}`)
       .then(
         response => response.json(),
-        error => dispatch(fetchSearchFailure()),
+        () => dispatch(fetchSearchFailure()),
       )
       .then(
         json => dispatch(fetchSearchSuccess(json)),
-        error => dispatch(fetchSearchFailure()),
+        () => dispatch(fetchSearchFailure()),
       );
   };
 }
