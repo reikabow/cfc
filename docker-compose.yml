@@ -4,14 +4,14 @@ services:
     build: ./client
     volumes:
     - ./client:/code
-    - /code/node_modules
+    # - /code/node_modules
     ports:
     - "3000:3000"
   server:
     build: ./server
     volumes:
     - ./server:/code
-    - /code/node_modules
+    # - /code/node_modules
     ports:
     - "3001:3001"
     environment:
@@ -20,6 +20,8 @@ services:
       PGHOST: db
       PGPORT: 5432
       PORT: 3001
+    links:
+    - db
   db:
     image: postgres:alpine
     volumes:
