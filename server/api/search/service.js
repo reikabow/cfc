@@ -1,10 +1,5 @@
 const { Pool } = require('pg');
 
-// PGHOST
-// PGPORT
-// PGDATABASE
-// PGUSER
-// PGPASSWORD
 const pool = new Pool();
 
 /**

@@ -1,9 +1,6 @@
 const bodyParser = require('body-parser');
-const express = require('express');
-
-const api = require('./api');
-
-const router = express.Router();
+const router = require('express').Router();
+const api = require('./service');
 
 const asyncMiddleware = fn =>
   (req, res, next) => {
