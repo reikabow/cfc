@@ -1,11 +1,4 @@
-const { Pool } = require('pg');
-
-// PGHOST
-// PGPORT
-// PGDATABASE
-// PGUSER
-// PGPASSWORD
-const pool = new Pool();
+const pool = require('../database');
 
 /**
  * Searches dictionary for matching simplified text

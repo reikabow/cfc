@@ -12,8 +12,8 @@ CREATE TABLE dictionary (
 
 CREATE TABLE cardgroup (
   id SERIAL PRIMARY KEY,
-  name text,
-  created date
+  name TEXT,
+  created DATE
 );
 
 CREATE TABLE card (
