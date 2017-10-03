@@ -22,8 +22,14 @@ services:
       PORT: 3001
     links:
     - db
+    - test_db
   db:
     build: ./db
+    environment:
+      POSTGRES_PASSWORD: apple1
+      POSTGRES_USER: cfc
+  test_db:
+    build: ./test_db
     environment:
       POSTGRES_PASSWORD: apple1
       POSTGRES_USER: cfc
