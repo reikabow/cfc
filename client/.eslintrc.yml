@@ -1,8 +1,0 @@
-extends: airbnb
-plugins:
-- jest
-rules:
-  # we use react-redux to populate default props
-  react/require-default-props: "off"
-env:
-  jest/globals: true
