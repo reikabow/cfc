@@ -1,4 +1,4 @@
-FROM node:alpine
+FROM node:latest
 
 WORKDIR /code
 
@@ -8,4 +8,4 @@ RUN npm install -g --silent nodemon
 
 EXPOSE 3001
 
-CMD ["nodemon", "index"]
+CMD ["/bin/bash", "docker_entry.sh"]
