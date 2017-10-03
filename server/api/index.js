@@ -1,11 +1,10 @@
 const router = require('express').Router();
-const search = require('./search/');
-const cards = require('./cards/');
+
+const { SearchController } = require('./v1/controllers/');
 
 router.get('/health', (req, res) => {
   res.json({ status: 'ok' });
 });
-router.use('/search', search);
-router.use('/cards', cards);
+router.use('/search', SearchController.router);
 
 module.exports = router;
