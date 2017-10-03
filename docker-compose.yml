@@ -23,11 +23,7 @@ services:
     links:
     - db
   db:
-    image: postgres:alpine
-    volumes:
-    - ./database:/var/lib/postgresql
-    ports:
-    - "5432:5432"
+    build: ./db
     environment:
       POSTGRES_PASSWORD: apple1
       POSTGRES_USER: cfc

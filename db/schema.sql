@@ -1,8 +1,8 @@
-DROP TABLE IF EXISTS dictionary;
-DROP TABLE IF EXISTS cardgroup;
-DROP TABLE IF EXISTS card;
+DROP TABLE IF EXISTS terms;
+DROP TABLE IF EXISTS cards;
+DROP TABLE IF EXISTS sets;
 
-CREATE TABLE dictionary (
+CREATE TABLE terms (
   id SERIAL PRIMARY KEY,
   simplified TEXT,
   traditional TEXT,
@@ -10,15 +10,15 @@ CREATE TABLE dictionary (
   definition TEXT
 );
 
-CREATE TABLE cardgroup (
+CREATE TABLE sets (
   id SERIAL PRIMARY KEY,
   name TEXT,
   created DATE
 );
 
-CREATE TABLE card (
+CREATE TABLE cards (
   id SERIAL PRIMARY KEY,
-  cardgroup_id INTEGER REFERENCES cardgroup(id),
+  set_id INTEGER REFERENCES sets(id),
   simplified TEXT,
   traditional TEXT,
   pinyin TEXT,

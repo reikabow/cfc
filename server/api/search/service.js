@@ -8,7 +8,7 @@ const pool = require('../database');
 async function simplified(needle) {
   const { rows } = await pool.query(`
     SELECT id, simplified, traditional, pinyin, definition
-    FROM dictionary
+    FROM terms
     WHERE simplified = $1`, [needle]);
   return rows;
 }
@@ -16,7 +16,7 @@ async function simplified(needle) {
 async function traditional(needle) {
   const { rows } = await pool.query(`
     SELECT id, simplified, traditional, pinyinm definition
-    FROM dictionary
+    FROM terms
     WHERE traditional = $1`, [needle]);
   return rows;
 }
@@ -29,7 +29,7 @@ async function traditional(needle) {
 async function pinyin(needle) {
   const { rows } = await pool.query(`
     SELECT id, simplified, traditional, pinyin, definition
-    FROM dictionary
+    FROM terms
     WHERE pinyin = $1`, [needle]);
   return rows;
 }
@@ -37,7 +37,7 @@ async function pinyin(needle) {
 async function definition(needle) {
   const { rows } = await pool.query(`
   SELECT id, simplified, traditional, pinyin, definition
-  FROM dictionary
+  FROM terms
   WHERE definition = $1`, [needle]);
   return rows;
 }
