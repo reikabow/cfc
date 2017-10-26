@@ -5,6 +5,6 @@ COPY schema.sql /docker-entrypoint-initdb.d/
 COPY . /code
 WORKDIR /code
 
-# Named zdump.sql for ordering purposes
+# Named zdump.sql for ordering purposes uhhhhhh wats up B
 RUN /bin/bash init.sh >zdump.sql
 RUN mv zdump.sql /docker-entrypoint-initdb.d/
